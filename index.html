@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .digit{
+            font-size: 70px;
+            font-weight: bold;
+            background-color: white;
+            padding: 0px 5px;
+            border-radius: 20px;
+        }
+        .txt{
+            font-size: 50px;
+        }
+        .name{
+            width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nm{
+            font-weight: bold;
+            margin-top: 5px;
+            padding-left: 18px;
+        }
+        #btn-container{
+            text-align: center;
+            margin-top: 40px;
+        }
+        .btn{
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 20px;
+            margin: 0px 10px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #start{
+            background-color: #0f947a;
+        }
+        #stop{
+            background-color: #196ca3;
+        }
+        #reset{
+            background-color: #b33325;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="time">
+            <span class="digit" id="hr">00</span>
+            <span class="txt">:</span>
+            <span class="digit" id="min">00</span>
+            <span class="txt">:</span>
+            <span class="digit" id="sec">00</span>
+            <span class="txt">:</span>
+            <span class="digit" id="count">00</span>
+        </div>
+        <div class="name">
+            <span class="nm">Hour</span>
+            <span class="nm">Min</span>
+            <span class="nm">Sec</span>
+            <span class="nm">Mili Sec</span>
+        </div>
+        <div id="btn-container">
+            <button class="btn" id="start" onclick="start()">Start</button>
+            <button class="btn" id="stop" onclick="stop()">Stop</button>
+            <button class="btn" id="reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
